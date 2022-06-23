@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:saharakhaja/screens/homePage_screen.dart';
 
+
+import '../auth_services.dart';
+
 class LoginScreen extends StatefulWidget {
   const LoginScreen({Key? key}) : super(key: key);
+  static const routeName = 'login-screen';
 
   @override
   State<LoginScreen> createState() => _LoginScreenState();
@@ -81,6 +85,7 @@ class _LoginScreenState extends State<LoginScreen> {
               ),
               ElevatedButton(
                   onPressed: () {
+                    AuthService().signinWithGoogle();
 
                   }, child: const Text("Login With Google")),
             ],

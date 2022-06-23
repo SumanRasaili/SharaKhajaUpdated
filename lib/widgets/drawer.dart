@@ -1,4 +1,6 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:saharakhaja/auth_services.dart';
 
 class AppDrawer extends StatelessWidget {
   const AppDrawer({ Key? key }) : super(key: key);
@@ -8,10 +10,10 @@ class AppDrawer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Drawer( 
       child: Column(children: [
-       const  UserAccountsDrawerHeader(
-        accountName: Text('Sahara Admin'),
-              accountEmail: Text('hamrosahara123@gmail.com'),
-              currentAccountPicture: CircleAvatar(
+         UserAccountsDrawerHeader(
+        accountName: Text(FirebaseAuth.instance.currentUser!.displayName!),
+              accountEmail: Text(FirebaseAuth.instance.currentUser!.email!),
+              currentAccountPicture:const  CircleAvatar(
                 backgroundImage: AssetImage('assets/image/sahara.png'),
                 maxRadius: 50,
                 backgroundColor: Colors.green,
@@ -41,7 +43,17 @@ class AppDrawer extends StatelessWidget {
           title: const Text("Address"),
 
           onTap: (){},
-        )
+        ),
+        ListTile(
+          leading: const Icon(Icons.logout),
+          title: const Text("Logout"),
+
+          onTap: (){
+
+            AuthService().signOut();
+          },
+        ),
+        
       ])
     );
   }

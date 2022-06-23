@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1073459896757",
+    "project_id": "khaja-project-16305",
+    "storage_bucket": "khaja-project-16305.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1073459896757:android:131436359f5d6ef2f5f9fc",
+        "android_client_info": {
+          "package_name": "com.example.saharakhaja"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1073459896757-tu5849h124754qvllhb5bvanis494uuk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCepPYB7MB8OkpupfJGu-QUvumJ585fWIg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1073459896757-tu5849h124754qvllhb5bvanis494uuk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

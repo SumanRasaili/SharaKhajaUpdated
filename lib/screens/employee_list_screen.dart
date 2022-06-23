@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 
 
 
-import 'employee_details_screen.dart';
+import '../widgets/employee_details.dart';
 
 class EmployeePage extends StatelessWidget {
   final String title;
